@@ -1,53 +1,110 @@
 <!DOCTYPE html>
-<html lang="he">
+<html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="VisioGallery — גלריית אומנות וטבע: ציורים, פסלים ותמונות טבע יוקרתיות." />
   <title>VisioGallery</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
+  <!-- כותרת עליונה -->
   <header>
-    <h1>האתר שלי</h1>
-    <nav>
-      <a href="index.html">בית</a>
-      <a href="about.html">אודות</a>
-      <a href="contact.html">צור קשר</a>
-    </nav>
+    <div class="container">
+      <h1 class="site-title">VisioGallery</h1>
+      <nav class="main-nav">
+        <a href="index.html">בית</a>
+        <a href="art.html">אומנות</a>
+        <a href="nature.html">טבע</a>
+        <a href="about.html">אודות</a>
+        <a href="contact.html">צור קשר</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <!-- תוכן ראשי -->
+  <main class="container">
+    <!-- פתיח -->
     <section>
-      <h2>ברוכים הבאים</h2>
-      <p>תיאור קצר על האתר שלך.</p>
-      <img src="images/art/art1.jpg" alt="תמונה לדוגמה">
+      <h2>ברוכים הבאים ל־VisioGallery</h2>
+      <p>
+        גלריית VisioGallery מציגה יצירות נבחרות משני עולמות קסומים —
+        <strong>אומנות</strong> ו<strong>טבע</strong>.  
+        בכל קטגוריה תמצאו תתי־גלריות מיוחדות: ציורים, פסלים ותמונות טבע מרהיבות.
+      </p>
+      <img src="images/art/art1.jpg" alt="יצירת אומנות לדוגמה" loading="lazy" />
+    </section>
+
+    <!-- קטגוריות ראשיות -->
+    <section aria-labelledby="categories-title" style="margin-top:24px">
+      <h2 id="categories-title">קטגוריות ראשיות</h2>
+      <div class="gallery-grid">
+        <a class="card" href="art.html">
+          <img src="images/art/art1.jpg" alt="קטגוריית אומנות" loading="lazy" />
+          <div class="meta">אומנות</div>
+        </a>
+
+        <a class="card" href="nature.html">
+          <img src="images/nature/nat1.jpg" alt="קטגוריית טבע" loading="lazy" />
+          <div class="meta">טבע</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- תתי קטגוריות של אומנות -->
+    <section style="margin-top:32px">
+      <h2>תתי־קטגוריות באומנות</h2>
+      <div class="gallery-grid">
+        <a class="card" href="art-paintings.html">
+          <img src="images/art/paint1.jpg" alt="ציורי אומנות" loading="lazy" />
+          <div class="meta">ציורים</div>
+        </a>
+
+        <a class="card" href="art-sculptures.html">
+          <img src="images/art/sculpt1.jpg" alt="פסלי אומנות" loading="lazy" />
+          <div class="meta">פסלים</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- תתי קטגוריות של טבע -->
+    <section style="margin-top:32px">
+      <h2>תתי־קטגוריות בטבע</h2>
+      <div class="gallery-grid">
+        <a class="card" href="nature-paintings.html">
+          <img src="images/nature/natpaint1.jpg" alt="ציורי טבע" loading="lazy" />
+          <div class="meta">ציורים</div>
+        </a>
+
+        <a class="card" href="nature-photos.html">
+          <img src="images/nature/natphoto1.jpg" alt="תמונות טבע" loading="lazy" />
+          <div class="meta">תמונות</div>
+        </a>
+      </div>v
+    </section>
+
+    <!-- וידאו השראה -->
+    <section style="margin-top:32px">
+      <h2>וידאו השראה</h2>
+      <div class="card">
+        <iframe
+          width="100%" height="360"
+          src="media/intro1.mp4"
+          title="וידאו השראה"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
     </section>
   </main>
 
+  <!-- כותרת תחתונה -->
   <footer>
-    <p>© 2025 האתר שלי</p>
+    <div class="container">
+      <p>© 2025 VisioGallery • כל הזכויות שמורות</p>
+    </div>
   </footer>
-  <section>
-  <h2>קטגוריות</h2>
-  <div class="gallery-grid">
-    <a class="card" href="art.html">
-      <img src="images/art/art1.jpg" alt="טעימה מקטגוריית אומנות" />
-      <div class="meta">אומנות</div>
-    <a class="card" href="nature.html">
-      <img src="images/nature/nat1.jpg" alt="טעימה מקטגוריית טבע" />
-      <div class="meta">טבע</div>
-    </a>
-  </div>
-</section>
-
-<section style="margin-top:24px">
-  <h2>וידאו קצר (רשות)</h2>
-  <div class="card">
-    <iframe width="100%" height="360"
-      src="https://www.youtube.com/embed/VIDEO_ID" title="וידאו השראה"
-      frameborder="0" allowfullscreen></iframe>
-  </div>
-</section>
-
 </body>
 </html>
