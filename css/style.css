@@ -140,3 +140,17 @@ th {
 @media (max-width: 768px) {
   .gallery-grid { gap: 12px; }
 }
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* שם האתר במרכז */
+  gap: 16px;               /* רווח בין הלוגו לשם */
+  position: relative;      /* מאפשר למקם את הלוגו */
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  position: absolute;      /* למקם בצד */
+  left: 16px;              /* צד שמאל בדפי RTL */
+}
