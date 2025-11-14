@@ -32,10 +32,17 @@ a:hover {
 }
 
 /* אזור עליון ותחתון */
-header, footer {
+header {
   background: rgba(255, 255, 255, 0.9);
-  border-bottom: 1px solid rgba(176, 141, 40, 0.4);
-  border-top: 1px solid rgba(176, 141, 40, 0.4);
+  border-bottom: 2px solid rgba(176, 141, 40, 0.4);
+  /*border-top: 1px solid rgba(176, 141, 40, 0.4);*/
+  padding: 16px;
+  text-align: center;
+}
+footer {
+  background: rgba(255, 255, 255, 0.9);
+  border-top: 2px solid rgba(176, 141, 40, 0.4);
+  /*border-top: 1px solid rgba(176, 141, 40, 0.4);*/
   padding: 16px;
   text-align: center;
 }
@@ -50,14 +57,14 @@ header, footer {
 /* גלריה רספונסיבית */
 .gallery-grid {
   display: grid;
-  gap: 20px;
+  gap: 25px;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   margin-top: 20px;
 }
 
 /* כרטיס תמונה */
 .card {
-  background: var(--card-bg);
+  background: var(--ivory);
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -67,7 +74,7 @@ header, footer {
 .card img {
   width: 100%;
   height: 220px;
-  object-fit: cover;
+  object-fit: cover; /*auto-fit*/
   border: 4px solid var(--gold-mid);
   border-radius: 8px;
   transition: border-color 0.3s ease, transform 0.2s ease;
@@ -149,7 +156,9 @@ th {
 }
 
 .logo {
-  height: 60px;
+  height: 150px;
+  border-radius: 100px;
+  border: 2px solid rgba(176, 141, 40, 0.4);
   width: auto;
   position: absolute;      /* למקם בצד */
   left: 16px;              /* צד שמאל בדפי RTL */
