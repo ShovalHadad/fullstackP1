@@ -1,0 +1,10 @@
+# Visual Studio folders
+.vs/
+v17/
+FileContentIndex/
+
+# קבצים זמניים ושאריים
+*.user
+*.suo
+*.sqlite
+*.json
