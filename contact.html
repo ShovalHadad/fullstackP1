@@ -1,28 +1,63 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="he" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>גלריית תמונות – דף בית</title>
   <link rel="stylesheet" href="css/style.css" />
+  <title>Leave Your Feedback – VisioGallery</title>
 </head>
 <body>
   <header class="site-header">
     <div class="brand">
       <img src="images/logo.png" alt="לוגו הגלריה" class="logo" />
-      <h1>גלריית תמונות</h1>
+      <h1>VisioGallery</h1>
     </div>
     <nav class="main-nav">
-      <a href="home.html">בית</a>
-      <a href="art.html">אומנות</a>
-      <a href="nature.html">טבע</a>
-      <a href="about.html">אודות</a>
+      <a href="home.html">Home</a>
+      <a href="art.html">Art</a>
+      <a href="nature.html">Nature</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <main class="container">
-    <h2>ברוכים הבאים</h2>
-    <p>תיאור קצר של הגלריה והקטגוריות.</p>
+    <div class="form-wrapper">
+      <h1 class="form-title">Leave Your Feedback</h1>
+      <form action="mailto:you@yourdomain.com" method="POST" enctype="text/plain">
+        <div class="row">
+          <div class="field">
+            <label>First Name</label>
+            <input type="text" name="First Name" required>
+          </div>
+          <div class="field">
+            <label>Last Name</label>
+            <input type="text" name="Last Name" required>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name="Email">
+          </div>
+          <div class="field">
+            <label>Phone</label>
+            <input type="tel" name="Phone">
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Feedback</label>
+          <textarea name="Feedback" required></textarea>
+        </div>
+
+        <button type="submit" class="btn">Send</button>
+        <p class="note">
+          The form will send the content through your device's installed email application.
+        </p>
+      </form>
+    </div>
   </main>
 
   <footer class="site-footer">
