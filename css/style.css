@@ -66,19 +66,49 @@ footer {
 .card {
   background: var(--ivory);
   border-radius: 12px;
-  overflow: hidden;
+  overflow: visible;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+
+/* --- מעטפת התמונה עם מסגרת זהב ומידות קבועות --- */
+.thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;            /* << קבעי פה את היחס הרצוי (16/9, 4/3, 1/1) */
+  background: #fff;                 /* פספרטו לבן */
+  border: 4px solid var(--gold-mid);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* וריאנטים נוחים אם תרצי לשנות יחס בדפים שונים */
+.ratio-4x3 { aspect-ratio: 4 / 3; }
+.ratio-1x1 { aspect-ratio: 1 / 1; }
+
+/* --- התמונה עצמה: נכנסת בשלמותה --- */
+.thumb img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;             /* מציג את כל התמונה בלי חיתוך */
+  display: block;
+}
+
+/* הובר עדין למסגרת */
+.thumb:hover { border-color: var(--gold-light); }
+
+
 /* תמונות עם מסגרת זהב */
-.card img {
+/*.card img {
   width: 100%;
   height: 220px;
-  object-fit: cover; /*auto-fit*/
+  object-fit: cover; 
   border: 4px solid var(--gold-mid);
   border-radius: 8px;
   transition: border-color 0.3s ease, transform 0.2s ease;
-}
+} */ 
 
 /* אפקט מעבר בעכבר */
 .card img:hover {
