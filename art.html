@@ -1,42 +1,65 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="he" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>גלריית תמונות – דף אומנות</title>
+  <title>VisioGallery | Art</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="brand">
-      <img src="images/logo.png" alt="לוגו הגלריה" class="logo" />
-      <h1>VisioGallery</h1>
-    </div>
-  <nav class="main-nav">
+
+<header class="site-header">
+  <div class="brand">
+    <img src="images/logo.png" alt="לוגו הגלריה" class="logo" />
+  </div>
+  <div class="container">
+    <h1>VisioGallery</h1>
+    <nav class="main-nav">
       <a href="home.html">Home</a>
       <a href="art.html">Art</a>
       <a href="nature.html">Nature</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main class="container">
-    
-  <a href="art-paintings.html" class="card">
-  <img src="images/Art/Art-Paintings/painting (4).jpg" alt="Art Paintings" style="width:200px; height: 300px;;">
-  art paintings
-</a>
+<main class="container">
 
-<a href="art-sculptures.html" class="card">
-  <img src="images/Art/Art-Sculptures/statue (15).jpg" alt="Art Sculptures" style="width:200px; height: 300px;;">
-  art sculptures
-</a>
+  <section>
+    <h2>Art Gallery</h2>
+    <p>Choose between a painting gallery and an sculpture gallery.</p>
 
-  </main>
+    <div class="gallery-grid">
 
-  <footer class="site-footer">
-    <p>© 2025 גלריית תמונות • <a href="https://www.metmuseum.org/" target="_blank">The Met</a> • <a href="https://www.nationalgeographic.com/" target="_blank">National Geographic</a> • <a href="https://www.moma.org/" target="_blank">MoMA</a></p>
-  </footer>
+      <a href="art-paintings.html" class="card">
+        <div class="thumb ratio-16x9">
+          <img src="images/Art/Art-Paintings/painting (4).jpg" alt="Art Paintings">
+        </div>
+        <div class="meta">art paintings</div>
+      </a>
+
+      <a href="art-sculptures.html" class="card">
+        <div class="thumb ratio-16x9">
+          <img src="images/Art/Art-Sculptures/statue (1).jpg" alt="Art Sculptures">
+        </div>
+        <div class="meta">art sculptures</div>
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>
+    © 2025 Pictures Gallery 
+    <a href="https://www.metmuseum.org/" target="_blank">The Met</a> •
+    <a href="https://www.nationalgeographic.com/" target="_blank">National Geographic</a> •
+    <a href="https://www.moma.org/" target="_blank">MoMA</a>
+  </p>
+</footer>
+
 </body>
 </html>

@@ -1,122 +1,143 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="VisioGallery — גלריית אומנות וטבע: ציורים, פסלים ותמונות טבע יוקרתיות." />
-  <title>VisioGallery</title>
+  <meta name="description" content="VisioGallery — a refined gallery of art and nature: paintings, sculptures and high-quality nature photography." />
+  <title>VisioGallery | Home</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+  <!-- Site Header -->
   <header>
     <div class="brand">
-      <img src="images/logo.png" alt="לוגו הגלריה" class="logo" />
+      <img src="images/logo.png" alt="VisioGallery logo" class="logo" />
     </div>
     <div class="container">
       <h1 class="site-title">VisioGallery</h1>
       <nav class="main-nav">
-      <a href="home.html">Home</a>
-      <a href="art.html">Art</a>
-      <a href="nature.html">Nature</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+        <a href="home.html">Home</a>
+        <a href="art.html">Art</a>
+        <a href="nature.html">Nature</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <!-- תוכן ראשי -->
+  <!-- Main Content -->
   <main class="container">
-    <!-- פתיח -->
+
+    <!-- Hero / Intro -->
     <section>
-      <h2>ברוכים הבאים ל־VisioGallery</h2>
+      <h2>Welcome to VisioGallery</h2>
       <p>
-        גלריית VisioGallery מציגה יצירות נבחרות משני עולמות קסומים —
-        <strong>אומנות</strong> <strong>טבע</strong>.  
-        בכל קטגוריה תמצאו תתי־גלריות מיוחדות: ציורים, פסלים ותמונות טבע מרהיבות.
+        VisioGallery presents a curated collection from two inspiring worlds:
+        <strong>Art</strong> and <strong>Nature</strong>.  
+        Each category contains dedicated sub-galleries with paintings, sculptures,
+        and breathtaking nature photography.
       </p>
     </section>
 
-    <!-- קטגוריות ראשיות -->
+    <!-- Main Categories -->
     <section aria-labelledby="categories-title" style="margin-top:24px">
-      <h2 id="categories-title">קטגוריות ראשיות</h2>
+      <h2 id="categories-title">Main Categories</h2>
       <div class="gallery-grid">
+
+        <!-- Art category -->
         <a class="card" href="art.html">
           <div class="thumb ratio-16x9">
-            <img src="images/art/Art-Paintings/painting (2).jpg" alt="קטגוריית אומנות" loading="lazy" />
+            <img src="images/art/Art-Paintings/painting (2).jpg" alt="Art category cover" loading="lazy" />
           </div>
-          <div class="meta">אומנות</div>
+          <div class="meta">Art</div>
         </a>
 
+        <!-- Nature category -->
         <a class="card" href="nature.html">
           <div class="thumb ratio-16x9">
-            <img src="images/nature/Photos-Nature/Nature (1).jpg" alt="קטגוריית טבע" loading="lazy" />
+            <img src="images/nature/Photos-Nature/Nature (1).jpg" alt="Nature category cover" loading="lazy" />
           </div>
-          <div class="meta">טבע</div>
+          <div class="meta">Nature</div>
         </a>
+
       </div>
     </section>
 
-    <!-- תתי קטגוריות של אומנות -->
+    <!-- Art Sub-Categories -->
     <section style="margin-top:32px">
-      <h2>תתי־קטגוריות באומנות</h2>
+      <h2>Art Sub-Galleries</h2>
       <div class="gallery-grid">
+
+        <!-- Paintings -->
         <a class="card" href="art-paintings.html">
           <div class="thumb ratio-16x9">
-            <img src="images/art/Art-Paintings/painting (3).jpg" alt="ציורי אומנות" loading="lazy" />
+            <img src="images/art/Art-Paintings/painting (3).jpg" alt="Art paintings gallery" loading="lazy" />
           </div>
-          <div class="meta">ציורים</div>
+          <div class="meta">Paintings</div>
         </a>
 
+        <!-- Sculptures -->
         <a class="card" href="art-sculptures.html">
           <div class="thumb ratio-16x9">
-            <img src="images/art/Art-Sculptures/statue (1).jpg" alt="פסלי אומנות" loading="lazy" />
+            <img src="images/art/Art-Sculptures/statue (1).jpg" alt="Art sculptures gallery" loading="lazy" />
           </div>
-          <div class="meta">פסלים</div>
+          <div class="meta">Sculptures</div>
         </a>
+
       </div>
     </section>
 
-    <!-- תתי קטגוריות של טבע -->
+    <!-- Nature Sub-Categories -->
     <section style="margin-top:32px">
-      <h2>תתי־קטגוריות בטבע</h2>
+      <h2>Nature Sub-Galleries</h2>
       <div class="gallery-grid">
+
+        <!-- Animal photos -->
         <a class="card" href="nature-animals.html">
           <div class="thumb ratio-16x9">
-            <img src="images/nature/Photos-Animals/animal (10).jpg" alt="חיות" loading="lazy" />
+            <img src="images/nature/Photos-Animals/animal (10).jpg" alt="Animal photography gallery" loading="lazy" />
           </div>
-          <div class="meta">Animal</div>
+          <div class="meta">Animal photos</div>
         </a>
 
+        <!-- Landscape photos -->
         <a class="card" href="nature-landscapes.html">
           <div class="thumb ratio-16x9">
-            <img src="images/nature/Photos-Nature/Nature (10).jpg" alt="נוף" loading="lazy" />
+            <img src="images/nature/Photos-Nature/Nature (10).jpg" alt="Landscape photography gallery" loading="lazy" />
           </div>
-          <div class="meta">Landscape</div>
+          <div class="meta">Landscape photos</div>
         </a>
+
       </div>
     </section>
 
-    <!-- וידאו השראה -->
+    <!-- Inspiration Video -->
     <section style="margin-top:32px">
-      <h2>וידאו השראה</h2>
+      <h2>Inspiration Video</h2>
       <div class="card">
         <iframe
           width="100%" height="360"
           src="media/intro1.mp4"
-          title="וידאו השראה"
+          title="VisioGallery inspiration video"
           loading="lazy"
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen>
         </iframe>
       </div>
     </section>
+
   </main>
 
-  <!-- כותרת תחתונה -->
+  <!-- Footer -->
   <footer>
     <div class="container">
-      <p>© 2025 VisioGallery • כל הזכויות שמורות</p>
+      <p>
+        © 2025 Pictures Gallery 
+        <a href="https://www.metmuseum.org/" target="_blank">The Met</a> •
+        <a href="https://www.nationalgeographic.com/" target="_blank">National Geographic</a> •
+        <a href="https://www.moma.org/" target="_blank">MoMA</a>
+      </p>    
     </div>
   </footer>
 </body>
