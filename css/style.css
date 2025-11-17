@@ -20,7 +20,7 @@ body {
   line-height: 1.6;
 }
 
-/* קישורים */
+/* קישורים כלליים */
 a {
   color: var(--gold-mid);
   font-weight: bold;
@@ -31,30 +31,112 @@ a:hover {
   text-decoration: underline;
 }
 
-/* אזור עליון ותחתון */
-header {
+/* ===================================== */
+/* HEADER & FOOTER                       */
+/* ===================================== */
+
+header,
+.site-header {
   background: rgba(255, 255, 255, 0.9);
   border-bottom: 2px solid rgba(176, 141, 40, 0.4);
-  /*border-top: 1px solid rgba(176, 141, 40, 0.4);*/
-  padding: 16px;
+  padding: 16px 16px 12px 16px;
+  position: relative;      /* כדי שהלוגו האבסולוטי יתייחס ל-header */
+}
+
+/* ה"מכולה" הפנימית של הכותרת + תפריט */
+header > .container,
+.site-header > .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
   text-align: center;
 }
-footer {
+
+/* לוגו בצד שמאל למעלה – לא משפיע על המרכז */
+.brand {
+  position: absolute;
+  left: 16px;
+  top: 8px;
+}
+.logo {
+  height: 110px;
+  width: auto;
+  max-width: 26vw;
+  border-radius: 50%;
+  border: 2px solid rgba(176, 141, 40, 0.4);
+  display: block;
+}
+
+/* כותרת האתר – ממורכזת */
+header h1,
+header .site-title {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 2.4rem;
+  color: var(--text);
+  text-align: center;
+}
+
+/* ניווט עליון – ממורכז מתחת לכותרת */
+.main-nav {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 28px;      /* ריווח אופקי יפה בין הקטגוריות */
+}
+
+/* פריטי ניווט – יוקרתי עם קו עדין בהובר */
+.main-nav a {
+  position: relative;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
+  color: var(--gold-mid);
+  padding-bottom: 4px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold-light));
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
+.main-nav a:hover {
+  color: var(--gold-dark);
+}
+.main-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* FOOTER */
+footer,
+.site-footer {
   background: rgba(255, 255, 255, 0.9);
   border-top: 2px solid rgba(176, 141, 40, 0.4);
-  /*border-top: 1px solid rgba(176, 141, 40, 0.4);*/
   padding: 16px;
   text-align: center;
 }
 
-/* תוכן ראשי */
+/* מיכל כללי לתוכן */
 .container {
   max-width: 1200px;
   padding: 16px;
   margin: 0 auto;
 }
 
-/* גלריה רספונסיבית */
+/* ===================================== */
+/* GALLERY & CARDS                       */
+/* ===================================== */
+
 .gallery-grid {
   display: grid;
   gap: 25px;
@@ -70,44 +152,30 @@ footer {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-
-/* --- מעטפת התמונה עם מסגרת זהב ומידות קבועות --- */
+/* מעטפת התמונה זהובה עם יחס קבוע */
 .thumb {
   width: 100%;
-  aspect-ratio: 4 / 3;            /* יחס קבוע לכל הכרטיסים: אפשר לשנות ל-16/9 אם תרצי */
+  aspect-ratio: 4 / 3;
   border: 4px solid var(--gold-mid);
   border-radius: 12px;
-  overflow: hidden;               /* חותך את מה שיוצא מחוץ למסגרת */
+  overflow: hidden;
 }
-
-/* וריאנטים נוחים אם תרצי לשנות יחס בדפים שונים */
 .ratio-4x3 { aspect-ratio: 4 / 3; }
 .ratio-1x1 { aspect-ratio: 1 / 1; }
+.ratio-16x9 { aspect-ratio: 16 / 9; }
 
-/* --- התמונה עצמה: נכנסת בשלמותה --- */
 .thumb img {
   width: 100%;
   height: 100%;
-  object-fit: cover;              /* ממלא את המסגרת, חותך קצת אם צריך */
+  object-fit: cover;
   display: block;
 }
 
-/* הובר עדין למסגרת */
 .thumb:hover {
   border-color: var(--gold-light);
 }
 
-/* תמונות עם מסגרת זהב */
-/*.card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover; 
-  border: 4px solid var(--gold-mid);
-  border-radius: 8px;
-  transition: border-color 0.3s ease, transform 0.2s ease;
-} */
-
-/* אפקט מעבר בעכבר */
+/* אם יש תמונה ישירה בתוך card (בדפים מסוימים) */
 .card img:hover {
   border-color: var(--gold-light);
   transform: scale(1.02);
@@ -120,7 +188,10 @@ footer {
   font-weight: 600;
 }
 
-/* כפתורים */
+/* ===================================== */
+/* BUTTONS                               */
+/* ===================================== */
+
 button {
   background: linear-gradient(45deg, var(--gold-mid), var(--gold-light));
   border: none;
@@ -136,14 +207,41 @@ button:hover {
   box-shadow: 0 0 8px rgba(176, 141, 40, 0.4);
 }
 
-/* טפסים */
+.btn {
+  background: linear-gradient(45deg, var(--gold-mid), var(--gold-light));
+  color: #2e2e2e;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+.btn:hover {
+  background: linear-gradient(45deg, var(--gold-light), var(--gold-dark));
+}
+
+/* ===================================== */
+/* FORMS & TABLES                        */
+/* ===================================== */
+/* Active menu item */
+.main-nav a.active {
+  color: var(--gold-dark);
+}
+
+.main-nav a.active::after {
+  transform: scaleX(1); /* קו זהב מודגש */
+}
+
 form {
   display: grid;
   gap: 12px;
   max-width: 640px;
   margin: auto;
 }
-input, select, textarea {
+
+input,
+select,
+textarea {
   font: inherit;
   padding: 10px 12px;
   border-radius: 8px;
@@ -152,7 +250,10 @@ input, select, textarea {
   color: var(--text);
 }
 
-/* טבלה */
+.table-wrapper {
+  overflow-x: auto;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -161,7 +262,8 @@ table {
   border-radius: 10px;
   overflow: hidden;
 }
-th, td {
+th,
+td {
   padding: 10px 12px;
   border-bottom: 1px solid rgba(176, 141, 40, 0.2);
   text-align: right;
@@ -171,26 +273,10 @@ th {
   color: #2e2e2e;
 }
 
-/* רספונסיביות */
-@media (max-width: 768px) {
-  .gallery-grid { gap: 12px; }
-}
-.header-flex {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* שם האתר במרכז */
-  gap: 16px;               /* רווח בין הלוגו לשם */
-  position: relative;      /* מאפשר למקם את הלוגו */
-}
+/* ===================================== */
+/* ABOUT PAGE / CONTACT                  */
+/* ===================================== */
 
-.logo {
-  height: 150px;
-  border-radius: 100px;
-  border: 2px solid rgba(176, 141, 40, 0.4);
-  width: auto;
-  position: absolute;      /* למקם בצד */
-  left: 16px;              /* צד שמאל בדפי RTL */
-}
 .about-text {
   font-size: 1.1rem;
   line-height: 1.9;
@@ -204,53 +290,99 @@ th {
 .about-text strong {
   font-size: 1.3rem;
 }
-.main-nav a {
-  margin: 0 15px; /* רווח אופקי בין הקישורים */
-  text-decoration: none;
-}
+
 .form-wrapper {
-  background: var(--ivory); /* משנה לרקע הנהוג באתר */
+  background: var(--ivory);
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.06);
 }
 
-input, textarea {
-  border: 1px solid rgba(176,141,40,0.3);
-  border-radius: 8px;
-  padding: 10px;
-  font-family: inherit;
-  font-size: 1rem;
-  color: var(--text);
-  background: #fff;
-}
-
-.btn {
-  background: linear-gradient(45deg, var(--gold-mid), var(--gold-light));
-  color: #2e2e2e;
-  border-radius: 8px;
-  padding: 12px;
-  font-weight: bold;
-  cursor: pointer;
-  border: none;
-}
-
-.btn:hover {
-  background: linear-gradient(45deg, var(--gold-light), var(--gold-dark));
-}
 .row {
   display: flex;
   gap: 15px;
 }
-
 .field {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
+
+/* כותרת כללית */
 h1 {
   font-family: "Segoe UI", Arial, sans-serif;
   text-align: center;
   color: var(--text);
   margin-bottom: 20px;
+}
+
+/* TITLE + LINK (בדף paintings) */
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.sculpture-link {
+  font-weight: bold;
+  color: var(--gold-mid);
+  padding: 8px 14px;
+  border: 2px solid var(--gold-mid);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.sculpture-link:hover {
+  color: var(--gold-dark);
+  border-color: var(--gold-light);
+}
+
+/* ===================================== */
+/* RESPONSIVE                            */
+/* ===================================== */
+
+@media (max-width: 768px) {
+
+  /* Header בטור – לוגו, כותרת, תפריט */
+  header,
+  .site-header {
+    padding-top: 12px;
+  }
+
+  .brand {
+    position: static;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+
+  .logo {
+    height: 80px;
+    max-width: 40vw;
+    margin: 0 auto;
+  }
+
+  header > .container,
+  .site-header > .container {
+    text-align: center;
+  }
+
+  .main-nav {
+    justify-content: center;
+    margin-top: 8px;
+    gap: 6px 16px;
+  }
+
+  .gallery-grid {
+    gap: 12px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
 }
