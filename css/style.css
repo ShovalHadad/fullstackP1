@@ -226,6 +226,46 @@ footer,
   text-align: center;
   font-weight: 600;
 }
+/* ==== Lightbox בלי JavaScript ==== */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;                      /* מוסתר כברירת מחדל */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox:target {
+  display: flex;                      /* כשמגיעים ל-#id – מופיע */
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border: 4px solid var(--gold-mid);  /* מסגרת זהב כמו בגלריה */
+  border-radius: 12px;
+  object-fit: contain;
+  background: #000;
+}
+
+/* כפתור X לסגירה */
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: var(--gold-light);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.lightbox-close:hover {
+  color: var(--gold-dark);
+}
 
 /* ===================================== */
 /* BUTTONS                               */
