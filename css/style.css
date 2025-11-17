@@ -98,14 +98,14 @@ footer {
 }
 
 /* תמונות עם מסגרת זהב */
-.card img2 {
+/*.card img {
   width: 100%;
   height: 220px;
   object-fit: cover; 
   border: 4px solid var(--gold-mid);
   border-radius: 8px;
   transition: border-color 0.3s ease, transform 0.2s ease;
-} 
+} */
 
 /* אפקט מעבר בעכבר */
 .card img:hover {
