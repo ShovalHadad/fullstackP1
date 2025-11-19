@@ -1,7 +1,7 @@
 /* ===================================== */
 /* CSS VARIABLES - Global Color Theme   */
 /* Used: Throughout the entire site     */
-/* Why: Easy to change colors globally  */
+/* For Easy to change colors globally  */
 /* ===================================== */
 
 :root {
@@ -20,7 +20,7 @@
 /* ===================================== */
 /* BODY - Global Page Defaults          */
 /* Used: Applied to all pages           */
-/* Why: Sets base styling for entire site */
+/* For Sets base styling for entire site */
 /* ===================================== */
 
 body {
@@ -34,7 +34,7 @@ body {
 /* ===================================== */
 /* LINKS - All Clickable Links          */
 /* Used: <a> tags throughout site      */
-/* Why: Consistent link styling        */
+/* For Consistent link styling        */
 /* ===================================== */
 
 a {
@@ -51,7 +51,7 @@ a:hover {
 /* ===================================== */
 /* HEADER & FOOTER - Navigation Areas   */
 /* Used: <header>, <footer> tags       */
-/* Why: Consistent styling for both ends */
+/* For Consistent styling for both ends */
 /* ===================================== */
 
 header,
@@ -74,7 +74,7 @@ header > .container,
 /* ===================================== */
 /* LOGO - Brand Image                   */
 /* Used: <div class="brand"> in header  */
-/* Why: Positions logo in top-left      */
+/* For Positions logo in top-left      */
 /* ===================================== */
 
 .brand {
@@ -95,7 +95,7 @@ header > .container,
 /* ===================================== */
 /* SITE TITLE - Main Page Heading       */
 /* Used: <h1> in header                 */
-/* Why: Large centered page title       */
+/* For Large centered page title       */
 /* ===================================== */
 
 header h1,
@@ -110,7 +110,7 @@ header .site-title {
 /* ===================================== */
 /* NAVIGATION - Main Menu Bar           */
 /* Used: <nav class="main-nav">         */
-/* Why: Horizontal menu with animations */
+/* For Horizontal menu with animations */
 /* ===================================== */
 
 .main-nav {
@@ -168,7 +168,7 @@ header .site-title {
 /* ===================================== */
 /* FOOTER - Bottom of Page              */
 /* Used: <footer>, <footer class="site-footer"> */
-/* Why: Consistent bottom styling       */
+/* For Consistent bottom styling       */
 /* ===================================== */
 
 footer,
@@ -182,7 +182,7 @@ footer,
 /* ===================================== */
 /* CONTAINER - Main Content Wrapper     */
 /* Used: <main class="container">       */
-/* Why: Limits width and centers content */
+/* For Limits width and centers content */
 /* ===================================== */
 
 .container {
@@ -194,7 +194,7 @@ footer,
 /* ===================================== */
 /* VIDEO FRAME - Local Video Player     */
 /* Used: <div class="video-frame">      */
-/* Why: Styled container for MP4 videos */
+/* For Styled container for MP4 videos */
 /* ===================================== */
 
 .video-frame {
@@ -222,7 +222,7 @@ footer,
 /* ===================================== */
 /* GALLERY GRID - Image Grid Layout     */
 /* Used: <div class="gallery-grid">     */
-/* Why: Responsive multi-column layout  */
+/* For Responsive multi-column layout  */
 /* ===================================== */
 
 .gallery-grid {
@@ -237,7 +237,7 @@ footer,
 /* ===================================== */
 /* CARD - Gallery Item Container        */
 /* Used: <a class="card">               */
-/* Why: Styled clickable gallery item   */
+/* For Styled clickable gallery item   */
 /* ===================================== */
 
 .card {
@@ -251,7 +251,7 @@ footer,
 /* ===================================== */
 /* THUMB - Image Container in Card      */
 /* Used: <div class="thumb">            */
-/* Why: Fixed aspect ratio for images   */
+/* For Fixed aspect ratio for images   */
 /* ===================================== */
 
 .thumb {
@@ -276,7 +276,7 @@ footer,
 /* ===================================== */
 /* META - Card Title Below Image        */
 /* Used: <div class="meta">             */
-/* Why: Label for gallery items         */
+/* For Label for gallery items         */
 /* ===================================== */
 
 .card .meta {
@@ -289,7 +289,7 @@ footer,
 /* ===================================== */
 /* LIGHTBOX - Full Screen Image Viewer  */
 /* Used: <div class="lightbox">         */
-/* Why: Show images full-screen without JavaScript */
+/* For Show images full-screen without JavaScript */
 /* ===================================== */
 
 .lightbox {
@@ -335,7 +335,7 @@ footer,
 /* ===================================== */
 /* BUTTONS - Form Submission Buttons    */
 /* Used: <button> and .btn class        */
-/* Why: Styled clickable buttons        */
+/* For Styled clickable buttons        */
 /* ===================================== */
 
 button {
@@ -372,7 +372,7 @@ button:hover {
 /* ===================================== */
 /* FORMS - Form Field Styling           */
 /* Used: <form>, <input>, <textarea>    */
-/* Why: Consistent form appearance      */
+/* For Consistent form appearance      */
 /* ===================================== */
 
 form {
@@ -397,7 +397,7 @@ textarea {
 /* ===================================== */
 /* TABLES - Data Table Styling          */
 /* Used: <table> tag in about.html       */
-/* Why: Professional table appearance    */
+/* For Professional table appearance    */
 /* ===================================== */
 
 .table-wrapper {
@@ -430,7 +430,7 @@ th {
 /* ===================================== */
 /* ABOUT PAGE - Text Content            */
 /* Used: <p class="about-text">         */
-/* Why: Large readable text formatting  */
+/* For Large readable text formatting  */
 /* ===================================== */
 
 .about-text {
@@ -451,7 +451,7 @@ th {
 /* ===================================== */
 /* CONTACT PAGE - Form Wrapper          */
 /* Used: <div class="form-wrapper">     */
-/* Why: Styled container for forms      */
+/* For Styled container for forms      */
 /* ===================================== */
 
 .form-wrapper {
@@ -464,7 +464,7 @@ th {
 /* ===================================== */
 /* FORM ROW - Two Column Layout         */
 /* Used: <div class="row">               */
-/* Why: Side-by-side form fields        */
+/* For Side-by-side form fields        */
 /* ===================================== */
 
 .row {
@@ -482,7 +482,7 @@ th {
 /* ===================================== */
 /* PAGE HEADINGS - H1 Style             */
 /* Used: <h1> tags (various pages)      */
-/* Why: Consistent heading styling      */
+/* For Consistent heading styling      */
 /* ===================================== */
 
 h1 {
@@ -495,7 +495,7 @@ h1 {
 /* ===================================== */
 /* TITLE ROW - Heading with Link        */
 /* Used: <div class="title-row">        */
-/* Why: Align title and navigation link */
+/* For Align title and navigation link */
 /* ===================================== */
 
 .title-row {
@@ -523,7 +523,7 @@ h1 {
 /* ===================================== */
 /* RESPONSIVE DESIGN - Mobile Devices   */
 /* Used: Devices with max-width 768px   */
-/* Why: Adapt layout for smaller screens */
+/* For Adapt layout for smaller screens */
 /* ===================================== */
 
 @media (max-width: 768px) {
