@@ -1,291 +1,360 @@
+/* ===================================== */
+/* CSS VARIABLES - Global Color Theme   */
+/* Used: Throughout the entire site     */
+/* Why: Easy to change colors globally  */
+/* ===================================== */
+
 :root {
-  /* זהב חם ואמיתי */
-  --gold-dark: #7a5c0a;
-  --gold-mid: #b08d28;
-  --gold-light: #e0c97f;
+  /* Gold color palette - main branding colors */
+  --gold-dark: #7a5c0a;    /* Dark gold - for hover states and emphasis */
+  --gold-mid: #b08d28;     /* Primary gold - borders, links, buttons */
+  --gold-light: #e0c97f;   /* Light gold - gradients and accents */
 
-  /* צבעי רקע וטקסט */
-  --ivory: #f8f4ec;   /* שנהב רך */
-  --text: #2e2e2e;    /* אפור כהה לקריאות טובה */
-  --muted: #8c7f60;
-  --card-bg: #ffffff; /* רקע לכרטיסים */
-}
-
-/* רקע כללי */
-body {
-  background-color: var(--ivory);
-  color: var(--text);
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  line-height: 1.6;
-}
-
-/* קישורים כלליים */
-a {
-  color: var(--gold-mid);
-  font-weight: bold;
-  text-decoration: none;
-}
-a:hover {
-  color: var(--gold-dark);
-  text-decoration: underline;
+  /* Background and text colors */
+  --ivory: #f8f4ec;        /* Soft background - pages use this */
+  --text: #2e2e2e;         /* Dark gray - main text color for readability */
+  --muted: #8c7f60;        /* Muted gray - secondary text color */
+  --card-bg: #ffffff;      /* White - background for gallery cards */
 }
 
 /* ===================================== */
-/* HEADER & FOOTER                       */
+/* BODY - Global Page Defaults          */
+/* Used: Applied to all pages           */
+/* Why: Sets base styling for entire site */
+/* ===================================== */
+
+body {
+  background-color: var(--ivory);   /* Soft ivory background */
+  color: var(--text);               /* Dark text for readability */
+  margin: 0;                        /* Remove browser default margin */
+  font-family: "Segoe UI", Arial, sans-serif;  /* Modern font stack */
+  line-height: 1.6;                 /* Spacing between text lines */
+}
+
+/* ===================================== */
+/* LINKS - All Clickable Links          */
+/* Used: <a> tags throughout site      */
+/* Why: Consistent link styling        */
+/* ===================================== */
+
+a {
+  color: var(--gold-mid);       /* Gold color makes links stand out */
+  font-weight: bold;            /* Bold indicates it's clickable */
+  text-decoration: none;        /* Modern style - no underline */
+}
+
+a:hover {
+  color: var(--gold-dark);      /* Darker gold when user hovers */
+  text-decoration: underline;   /* Add underline for emphasis */
+}
+
+/* ===================================== */
+/* HEADER & FOOTER - Navigation Areas   */
+/* Used: <header>, <footer> tags       */
+/* Why: Consistent styling for both ends */
 /* ===================================== */
 
 header,
 .site-header {
-  background: rgba(255, 255, 255, 0.9);
-  border-bottom: 2px solid rgba(176, 141, 40, 0.4);
-  padding: 16px 16px 12px 16px;
-  position: relative;      /* כדי שהלוגו האבסולוטי יתייחס ל-header */
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  border-bottom: 2px solid rgba(176, 141, 40, 0.4);  /* Gold border */
+  padding: 16px 16px 12px 16px;  /* Internal spacing */
+  position: relative;            /* For absolute positioning of logo */
 }
 
-/* ה"מכולה" הפנימית של הכותרת + תפריט */
+/* Inner container - controls max width and centering */
 header > .container,
 .site-header > .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
+  max-width: 1200px;      /* Limits width on large screens */
+  margin: 0 auto;         /* Centers content horizontally */
+  padding: 0;             /* No extra padding in container */
+  text-align: center;     /* Centers all text inside */
 }
 
-/* לוגו בצד שמאל למעלה – לא משפיע על המרכז */
+/* ===================================== */
+/* LOGO - Brand Image                   */
+/* Used: <div class="brand"> in header  */
+/* Why: Positions logo in top-left      */
+/* ===================================== */
+
 .brand {
-  position: absolute;
-  left: 16px;
-  top: 8px;
-}
-.logo {
-  height: 110px;
-  width: auto;
-  max-width: 26vw;
-  border-radius: 50%;
-  border: 2px solid rgba(176, 141, 40, 0.4);
-  display: block;
+  position: absolute;     /* Positioned relative to header */
+  left: 16px;             /* 16px from left edge */
+  top: 8px;               /* 8px from top edge */
 }
 
-/* כותרת האתר – ממורכזת */
+.logo {
+  height: 110px;                  /* Fixed height */
+  width: auto;                    /* Width maintains aspect ratio */
+  max-width: 26vw;                /* Responsive - 26% of viewport */
+  border-radius: 50%;             /* Makes it a perfect circle */
+  border: 2px solid rgba(176, 141, 40, 0.4);  /* Gold border */
+  display: block;                 /* Removes spacing below image */
+}
+
+/* ===================================== */
+/* SITE TITLE - Main Page Heading       */
+/* Used: <h1> in header                 */
+/* Why: Large centered page title       */
+/* ===================================== */
+
 header h1,
 header .site-title {
-  margin: 0;
+  margin: 0;                      /* Remove default margin */
   font-family: "Segoe UI", Arial, sans-serif;
-  font-size: 2.4rem;
-  color: var(--text);
-  text-align: center;
+  font-size: 2.4rem;              /* Large size - "VisioGallery" */
+  color: var(--text);             /* Dark text */
+  text-align: center;             /* Centered */
 }
 
-/* ניווט עליון – ממורכז מתחת לכותרת */
+/* ===================================== */
+/* NAVIGATION - Main Menu Bar           */
+/* Used: <nav class="main-nav">         */
+/* Why: Horizontal menu with animations */
+/* ===================================== */
+
 .main-nav {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 8px 28px;      /* ריווח אופקי יפה בין הקטגוריות */
+  margin-top: 10px;           /* Space from title */
+  display: flex;              /* Horizontal layout */
+  justify-content: center;    /* Center menu items */
+  flex-wrap: wrap;            /* Wrap to next line if needed */
+  gap: 8px 28px;              /* 8px vertical, 28px horizontal spacing */
 }
 
-/* פריטי ניווט – יוקרתי עם קו עדין בהובר */
+/* Individual navigation links */
 .main-nav a {
-  position: relative;
-  font-weight: 700;
-  font-size: 1.05rem;
-  letter-spacing: 0.03em;
-  color: var(--gold-mid);
-  padding-bottom: 4px;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-.main-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 2px;
-  border-radius: 999px;
-  background: linear-gradient(90deg, var(--gold-dark), var(--gold-light));
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.2s ease;
-}
-.main-nav a:hover {
-  color: var(--gold-dark);
-}
-.main-nav a:hover::after {
-  transform: scaleX(1);
+  position: relative;         /* For ::after pseudo-element */
+  font-weight: 700;           /* Bold text */
+  font-size: 1.05rem;         /* Slightly larger */
+  letter-spacing: 0.03em;     /* Space between letters */
+  color: var(--gold-mid);     /* Gold color */
+  padding-bottom: 4px;        /* Space below for underline */
+  text-decoration: none;      /* No default underline */
+  transition: color 0.2s ease; /* Smooth color animation */
 }
 
-/* FOOTER */
+/* Decorative underline - created with ::after pseudo-element */
+.main-nav a::after {
+  content: "";                /* Creates invisible element */
+  position: absolute;         /* Positioned below text */
+  left: 0;                    /* Starts from left */
+  right: 0;                   /* Ends at right */
+  bottom: 0;                  /* At bottom of link */
+  height: 2px;                /* Thin line */
+  border-radius: 999px;       /* Rounded corners */
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold-light)); /* Gold gradient */
+  transform: scaleX(0);       /* Hidden by default */
+  transform-origin: center;   /* Grows from center */
+  transition: transform 0.2s ease;  /* Smooth growth animation */
+}
+
+.main-nav a:hover {
+  color: var(--gold-dark);    /* Darker gold on hover */
+}
+
+.main-nav a:hover::after {
+  transform: scaleX(1);       /* Show line - grows from 0% to 100% */
+}
+
+/* Highlight current page */
+.main-nav a.active {
+  color: var(--gold-dark);    /* Darker color - shows current page */
+}
+
+.main-nav a.active::after {
+  transform: scaleX(1);       /* Show gold line permanently */
+}
+
+/* ===================================== */
+/* FOOTER - Bottom of Page              */
+/* Used: <footer>, <footer class="site-footer"> */
+/* Why: Consistent bottom styling       */
+/* ===================================== */
+
 footer,
 .site-footer {
-  background: rgba(255, 255, 255, 0.9);
-  border-top: 2px solid rgba(176, 141, 40, 0.4);
-  padding: 16px;
-  text-align: center;
+  background: rgba(255, 255, 255, 0.9);  /* Semi-transparent white */
+  border-top: 2px solid rgba(176, 141, 40, 0.4);   /* Gold top border */
+  padding: 16px;              /* Internal spacing */
+  text-align: center;         /* Center all content */
 }
 
-/* מיכל כללי לתוכן */
-.container {
-  max-width: 1200px;
-  padding: 16px;
-  margin: 0 auto;
-}
-/* מסגרת זהובה ושמירה על גודל טבעי */
-.video-frame {
-  display: flex;
-  justify-content: center;
-  margin: 20px auto;
-  padding: 0;
-  border: 4px solid var(--gold-mid);
-  border-radius: 12px;
-  background: #000;  /* רקע אם יש מעט שוליים */
-  width: fit-content;   /* גודל לפי התוכן */
-  max-width: 100%;      /* לא לחרוג ממסכים קטנים */
-  overflow: hidden;
-}
-
-/* הווידאו עצמו — גודל טבעי אך רספונסיבי */
-.video-frame video {
-  display: block;
-  height: 70vh;
-  width: 50vh;
-  max-width: 600px;      /* 🔥 שולט על הגודל — אפשר לשנות */
-  max-height: 600px;     /* שמירה על גודל ריאלי */
-  object-fit: cover;     /* מסיר פסים שחורים */
-}
-
-/*
-.video-card {
-  border: 4px solid var(--gold-mid);
-  border-radius: 12px;
-  overflow: hidden;
-  margin-top: 10px;
-  background: var(--ivory); 
-}
-
-.video-card video {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;      
-}
-*/
 /* ===================================== */
-/* GALLERY & CARDS                       */
+/* CONTAINER - Main Content Wrapper     */
+/* Used: <main class="container">       */
+/* Why: Limits width and centers content */
+/* ===================================== */
+
+.container {
+  max-width: 1200px;    /* Maximum width for large screens */
+  padding: 16px;        /* Internal spacing on all sides */
+  margin: 0 auto;       /* Centers horizontally */
+}
+
+/* ===================================== */
+/* VIDEO FRAME - Local Video Player     */
+/* Used: <div class="video-frame">      */
+/* Why: Styled container for MP4 videos */
+/* ===================================== */
+
+.video-frame {
+  display: flex;                      /* Flexbox layout */
+  justify-content: center;            /* Center video horizontally */
+  margin: 20px auto;                  /* Margins around */
+  padding: 0;                         /* No internal padding */
+  border: 4px solid var(--gold-mid);  /* Gold border */
+  border-radius: 12px;                /* Rounded corners */
+  background: #000;                   /* Black background */
+  width: fit-content;                 /* Size based on content */
+  max-width: 100%;                    /* Responsive - don't exceed screen */
+  overflow: hidden;                   /* Hide overflow */
+}
+
+.video-frame video {
+  display: block;           /* Remove inline spacing */
+  height: 70vh;             /* 70% of viewport height */
+  width: 50vh;              /* 50% of viewport height */
+  max-width: 600px;         /* Maximum width limit */
+  max-height: 600px;        /* Maximum height limit */
+  object-fit: cover;        /* Cover area - no distortion */
+}
+
+/* ===================================== */
+/* GALLERY GRID - Image Grid Layout     */
+/* Used: <div class="gallery-grid">     */
+/* Why: Responsive multi-column layout  */
 /* ===================================== */
 
 .gallery-grid {
-  display: grid;
-  gap: 25px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  margin-top: 20px;
+  display: grid;                                          /* CSS Grid */
+  gap: 25px;                                              /* Space between cards */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Auto columns */
+  margin-top: 20px;                                       /* Space from above */
 }
+
+/* Creates as many columns as fit with 220px minimum width each */
+
+/* ===================================== */
+/* CARD - Gallery Item Container        */
+/* Used: <a class="card">               */
+/* Why: Styled clickable gallery item   */
+/* ===================================== */
 
 .card {
-  display: block;
-  background: var(--ivory);
-  border-radius: 12px;
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: block;                      /* Block element */
+  background: var(--ivory);            /* Light background */
+  border-radius: 12px;                 /* Rounded corners */
+  text-decoration: none;               /* No link underline */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animations */
 }
 
-/* מעטפת התמונה זהובה עם יחס קבוע */
+/* ===================================== */
+/* THUMB - Image Container in Card      */
+/* Used: <div class="thumb">            */
+/* Why: Fixed aspect ratio for images   */
+/* ===================================== */
+
 .thumb {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  border: 4px solid var(--gold-mid);
-  border-radius: 12px;
-  overflow: hidden;
+  width: 100%;            /* Full width of card */
+  aspect-ratio: 16 / 9;   /* Fixed 16:9 ratio - prevents distortion */
+  border: 4px solid var(--gold-mid);  /* Gold border */
+  border-radius: 12px;    /* Rounded corners */
+  overflow: hidden;       /* Hides image if it overflows */
 }
-.ratio-4x3 { aspect-ratio: 4 / 3; }
-.ratio-1x1 { aspect-ratio: 1 / 1; }
-.ratio-16x9 { aspect-ratio: 16 / 9; }
 
 .thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  width: 100%;            /* Fill thumb width */
+  height: 100%;           /* Fill thumb height */
+  object-fit: cover;      /* Cover area - crop if needed, no distortion */
+  display: block;         /* Remove spacing below image */
 }
 
 .thumb:hover {
-  border-color: var(--gold-light);
+  border-color: var(--gold-light);  /* Lighter gold on hover */
 }
 
-/* אם יש תמונה ישירה בתוך card (בדפים מסוימים) */
-.card img:hover {
-  border-color: var(--gold-light);
-  transform: scale(1.02);
-}
+/* ===================================== */
+/* META - Card Title Below Image        */
+/* Used: <div class="meta">             */
+/* Why: Label for gallery items         */
+/* ===================================== */
 
 .card .meta {
-  padding: 10px 12px;
-  color: var(--muted);
-  text-align: center;
-  font-weight: 600;
+  padding: 10px 12px;     /* Internal spacing */
+  color: var(--muted);    /* Muted gray color */
+  text-align: center;     /* Center text */
+  font-weight: 600;       /* Semi-bold */
 }
-/* ==== Lightbox בלי JavaScript ==== */
+
+/* ===================================== */
+/* LIGHTBOX - Full Screen Image Viewer  */
+/* Used: <div class="lightbox">         */
+/* Why: Show images full-screen without JavaScript */
+/* ===================================== */
 
 .lightbox {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  display: none;                      /* מוסתר כברירת מחדל */
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+  position: fixed;            /* Fixed on screen - stays visible */
+  inset: 0;                   /* Covers entire screen */
+  background: rgba(0, 0, 0, 0.85);  /* Dark semi-transparent background */
+  display: none;              /* Hidden by default */
+  justify-content: center;    /* Center horizontally */
+  align-items: center;        /* Center vertically */
+  z-index: 9999;              /* Above everything else */
 }
 
+/* When URL matches this ID (e.g., #p1), show the lightbox */
 .lightbox:target {
-  display: flex;                      /* כשמגיעים ל-#id – מופיע */
+  display: flex;              /* Make visible */
 }
 
 .lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border: 4px solid var(--gold-mid);  /* מסגרת זהב כמו בגלריה */
-  border-radius: 12px;
-  object-fit: contain;
-  background: #000;
+  max-width: 90%;             /* Don't exceed 90% width */
+  max-height: 90%;            /* Don't exceed 90% height */
+  border: 4px solid var(--gold-mid);  /* Gold border */
+  border-radius: 12px;        /* Rounded corners */
+  object-fit: contain;        /* Show entire image */
+  background: #000;           /* Black background */
 }
 
-/* כפתור X לסגירה */
+/* Close button (X) for lightbox */
 .lightbox-close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 40px;
-  color: var(--gold-light);
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.2s;
+  position: absolute;         /* Position at top-right corner */
+  top: 20px;                  /* 20px from top */
+  right: 30px;                /* 30px from right */
+  font-size: 40px;            /* Large X */
+  color: var(--gold-light);   /* Light gold */
+  text-decoration: none;      /* No underline */
+  font-weight: bold;          /* Bold */
+  transition: 0.2s;           /* Smooth color change */
 }
 
 .lightbox-close:hover {
-  color: var(--gold-dark);
+  color: var(--gold-dark);    /* Darker gold on hover */
 }
 
 /* ===================================== */
-/* BUTTONS                               */
+/* BUTTONS - Form Submission Buttons    */
+/* Used: <button> and .btn class        */
+/* Why: Styled clickable buttons        */
 /* ===================================== */
 
 button {
-  background: linear-gradient(45deg, var(--gold-mid), var(--gold-light));
-  border: none;
-  color: #2e2e2e;
-  font-weight: bold;
-  padding: 10px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-button:hover {
-  background: linear-gradient(45deg, var(--gold-light), var(--gold-dark));
-  box-shadow: 0 0 8px rgba(176, 141, 40, 0.4);
+  background: linear-gradient(45deg, var(--gold-mid), var(--gold-light)); /* Gold gradient */
+  border: none;                         /* No border */
+  color: #2e2e2e;                       /* Dark text */
+  font-weight: bold;                    /* Bold text */
+  padding: 10px 16px;                   /* Internal spacing */
+  border-radius: 8px;                   /* Rounded corners */
+  cursor: pointer;                      /* Hand cursor */
+  transition: all 0.3s ease;            /* Smooth animation */
 }
 
+button:hover {
+  background: linear-gradient(45deg, var(--gold-light), var(--gold-dark)); /* Reversed gradient */
+  box-shadow: 0 0 8px rgba(176, 141, 40, 0.4);  /* Shadow effect */
+}
+
+/* Alternative button class */
 .btn {
   background: linear-gradient(45deg, var(--gold-mid), var(--gold-light));
   color: #2e2e2e;
@@ -295,173 +364,217 @@ button:hover {
   cursor: pointer;
   border: none;
 }
+
 .btn:hover {
   background: linear-gradient(45deg, var(--gold-light), var(--gold-dark));
 }
 
 /* ===================================== */
-/* FORMS & TABLES                        */
+/* FORMS - Form Field Styling           */
+/* Used: <form>, <input>, <textarea>    */
+/* Why: Consistent form appearance      */
 /* ===================================== */
-/* Active menu item */
-.main-nav a.active {
-  color: var(--gold-dark);
-}
-
-.main-nav a.active::after {
-  transform: scaleX(1); /* קו זהב מודגש */
-}
 
 form {
-  display: grid;
-  gap: 12px;
-  max-width: 640px;
-  margin: auto;
+  display: grid;        /* Vertical stacking */
+  gap: 12px;            /* Space between fields */
+  max-width: 640px;     /* Maximum width */
+  margin: auto;         /* Center form */
 }
 
+/* All input elements - consistent styling */
 input,
 select,
 textarea {
-  font: inherit;
-  padding: 10px 12px;
-  border-radius: 8px;
-  border: 1px solid rgba(176, 141, 40, 0.3);
-  background: #fff;
-  color: var(--text);
+  font: inherit;                                /* Inherit font from parent */
+  padding: 10px 12px;                          /* Internal spacing */
+  border-radius: 8px;                          /* Rounded corners */
+  border: 1px solid rgba(176, 141, 40, 0.3);   /* Subtle gold border */
+  background: #fff;                            /* White background */
+  color: var(--text);                          /* Dark text */
 }
 
+/* ===================================== */
+/* TABLES - Data Table Styling          */
+/* Used: <table> tag in about.html       */
+/* Why: Professional table appearance    */
+/* ===================================== */
+
 .table-wrapper {
-  overflow-x: auto;
+  overflow-x: auto;   /* Horizontal scroll if table too wide */
 }
 
 table {
-  width: 100%;
-  border-collapse: collapse;
-  background: #fff;
-  border: 2px solid var(--gold-mid);
-  border-radius: 10px;
-  overflow: hidden;
+  width: 100%;                        /* Full width */
+  border-collapse: collapse;          /* Merge borders */
+  background: #fff;                   /* White background */
+  border: 2px solid var(--gold-mid);  /* Gold border */
+  border-radius: 10px;                /* Rounded corners */
+  overflow: hidden;                   /* Hide overflow */
 }
+
+/* Table header and data cells */
 th,
 td {
-  padding: 10px 12px;
-  border-bottom: 1px solid rgba(176, 141, 40, 0.2);
-  text-align: right;
+  padding: 10px 12px;                                    /* Internal spacing */
+  border-bottom: 1px solid rgba(176, 141, 40, 0.2);     /* Light gold divider */
+  text-align: center;                                    /* Center align text */
 }
+
+/* Table header cells - special styling */
 th {
-  background: linear-gradient(45deg, var(--gold-mid), var(--gold-light));
-  color: #2e2e2e;
+  background: linear-gradient(45deg, var(--gold-mid), var(--gold-light));  /* Gold gradient */
+  color: #2e2e2e;                                        /* Dark text */
 }
 
 /* ===================================== */
-/* ABOUT PAGE / CONTACT                  */
+/* ABOUT PAGE - Text Content            */
+/* Used: <p class="about-text">         */
+/* Why: Large readable text formatting  */
 /* ===================================== */
 
 .about-text {
-  font-size: 1.1rem;
-  line-height: 1.9;
-  max-width: 800px;
-  margin: 0 auto;
-  background: #fafafa;
-  padding: 25px 30px;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  font-size: 1.1rem;                    /* Slightly larger text */
+  line-height: 1.9;                     /* More space between lines */
+  max-width: 800px;                     /* Maximum readable width */
+  margin: 0 auto;                       /* Center content */
+  background: #fafafa;                  /* Light gray background */
+  padding: 25px 30px;                   /* Internal spacing */
+  border-radius: 12px;                  /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);  /* Subtle shadow */
 }
+
 .about-text strong {
-  font-size: 1.3rem;
-}
-
-.form-wrapper {
-  background: var(--ivory);
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-}
-
-.row {
-  display: flex;
-  gap: 15px;
-}
-.field {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-/* כותרת כללית */
-h1 {
-  font-family: "Segoe UI", Arial, sans-serif;
-  text-align: center;
-  color: var(--text);
-  margin-bottom: 20px;
-}
-
-/* TITLE + LINK (בדף paintings) */
-.title-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 16px;
-}
-.sculpture-link {
-  font-weight: bold;
-  color: var(--gold-mid);
-  padding: 8px 14px;
-  border: 2px solid var(--gold-mid);
-  border-radius: 8px;
-  text-decoration: none;
-  transition: 0.2s;
-}
-.sculpture-link:hover {
-  color: var(--gold-dark);
-  border-color: var(--gold-light);
+  font-size: 1.3rem;    /* Larger bold text for emphasis */
 }
 
 /* ===================================== */
-/* RESPONSIVE                            */
+/* CONTACT PAGE - Form Wrapper          */
+/* Used: <div class="form-wrapper">     */
+/* Why: Styled container for forms      */
+/* ===================================== */
+
+.form-wrapper {
+  background: var(--ivory);                    /* Ivory background */
+  padding: 25px;                               /* Internal spacing */
+  border-radius: 12px;                         /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);    /* Subtle shadow */
+}
+
+/* ===================================== */
+/* FORM ROW - Two Column Layout         */
+/* Used: <div class="row">               */
+/* Why: Side-by-side form fields        */
+/* ===================================== */
+
+.row {
+  display: flex;     /* Horizontal layout */
+  gap: 15px;         /* Space between fields */
+}
+
+/* Individual form field */
+.field {
+  flex: 1;                   /* Equal width */
+  display: flex;             /* Vertical stacking */
+  flex-direction: column;    /* Labels above inputs */
+}
+
+/* ===================================== */
+/* PAGE HEADINGS - H1 Style             */
+/* Used: <h1> tags (various pages)      */
+/* Why: Consistent heading styling      */
+/* ===================================== */
+
+h1 {
+  font-family: "Segoe UI", Arial, sans-serif;  /* Consistent font */
+  text-align: center;                          /* Center heading */
+  color: var(--text);                          /* Dark color */
+  margin-bottom: 20px;                         /* Space below */
+}
+
+/* ===================================== */
+/* TITLE ROW - Heading with Link        */
+/* Used: <div class="title-row">        */
+/* Why: Align title and navigation link */
+/* ===================================== */
+
+.title-row {
+  display: flex;                  /* Horizontal layout */
+  align-items: center;            /* Vertical center */
+  justify-content: space-between; /* Space between title and link */
+  margin-bottom: 16px;            /* Space below */
+}
+
+.sculpture-link {
+  font-weight: bold;                                /* Bold text */
+  color: var(--gold-mid);                          /* Gold color */
+  padding: 8px 14px;                               /* Internal spacing */
+  border: 2px solid var(--gold-mid);               /* Gold border */
+  border-radius: 8px;                              /* Rounded corners */
+  text-decoration: none;                           /* No underline */
+  transition: 0.2s;                                /* Smooth animation */
+}
+
+.sculpture-link:hover {
+  color: var(--gold-dark);                         /* Darker gold */
+  border-color: var(--gold-light);                 /* Lighter border */
+}
+
+/* ===================================== */
+/* RESPONSIVE DESIGN - Mobile Devices   */
+/* Used: Devices with max-width 768px   */
+/* Why: Adapt layout for smaller screens */
 /* ===================================== */
 
 @media (max-width: 768px) {
 
-  /* Header בטור – לוגו, כותרת, תפריט */
+  /* Header adjustments for tablets/phones */
   header,
   .site-header {
-    padding-top: 12px;
+    padding-top: 12px;    /* Less padding */
   }
 
+  /* Logo positioning - stack vertically */
   .brand {
-    position: static;
-    margin-bottom: 4px;
-    text-align: center;
+    position: static;     /* Remove absolute positioning */
+    margin-bottom: 4px;   /* Add space below */
+    text-align: center;   /* Center logo */
   }
 
   .logo {
-    height: 80px;
-    max-width: 40vw;
-    margin: 0 auto;
+    height: 80px;         /* Smaller logo */
+    max-width: 40vw;      /* 40% of viewport width */
+    margin: 0 auto;       /* Center */
   }
 
+  /* Center header content */
   header > .container,
   .site-header > .container {
     text-align: center;
   }
 
+  /* Navigation adjustments */
   .main-nav {
-    justify-content: center;
-    margin-top: 8px;
-    gap: 6px 16px;
+    justify-content: center;  /* Center menu */
+    margin-top: 8px;          /* Less margin */
+    gap: 6px 16px;            /* Smaller gaps */
   }
 
+  /* Gallery spacing */
   .gallery-grid {
-    gap: 12px;
+    gap: 12px;    /* Smaller gaps between cards */
   }
 
+  /* Form layout - stack vertically */
   .row {
-    flex-direction: column;
+    flex-direction: column;  /* Stack fields vertically */
   }
 
+  /* Title row - responsive */
   .title-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+    flex-direction: column;  /* Stack vertically */
+    align-items: flex-start; /* Align to left */
+    gap: 8px;               /* Space between */
   }
+
 }
